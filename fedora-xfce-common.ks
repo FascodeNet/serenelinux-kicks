@@ -21,6 +21,10 @@ fedora-release-xfce
 
 wget
 system-config-printer
+powerline-go
+zsh
+zsh-syntax-highlighting
+zsh-autosuggestions
 
 # save some space
 -autofs
