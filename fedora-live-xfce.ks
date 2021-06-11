@@ -18,8 +18,6 @@ part / --size 6144
 
 %post
 
-chsh -s /usr/bin/zsh liveuser
-
 # xfce configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
@@ -66,7 +64,7 @@ sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.d
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
-cat >> /home/liveuser/.zshrc << FOE
+cat >> /etc/skel/.zshrc << FOE
 #
 # ~/.zshrc
 #
@@ -182,7 +180,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 FOE
-
+cp /etc/skel/.zshrc /home/liveuser/
 # no updater applet in live environment
 rm -f /etc/xdg/autostart/org.mageia.dnfdragora-updater.desktop
 
