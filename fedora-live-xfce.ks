@@ -191,9 +191,7 @@ fi
 #-- Like fish prompt --#
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 EOF
 cp -f /etc/skel/.zshrc /home/liveuser/.zshrc22
 cp -f /etc/skel/.zshrc /home/liveuser/.zshrc
 %end
-
