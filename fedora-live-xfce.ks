@@ -78,20 +78,8 @@ restorecon -R /home/liveuser
 EOF
 
 cat > /etc/skel/.zshrc << EOF
-#
-# ~/.zshrc
-#
-#
-# Yamada Hayao
-# Twitter: @Hayao0819
-# Email  : hayao@fascode.net
-#
-# (c) 2019-2020 Fascode Network.
-#
-
 #-- Alias --#
 [[ -f .aliases ]] && source .aliases
-
 
 #-- Completion --#
 [ -e /usr/local/share/zsh-completions ] && fpath=(/usr/local/share/zsh-completions $fpath)
@@ -146,7 +134,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
-
 #-- Do not sound --#
 setopt nolistbeep
 setopt nolistbeep
@@ -167,7 +154,6 @@ colors
 #-- Pass to the path --#
 [[ -d ~/.bin ]] && export PATH="~/.bin:${PATH}"
 
-
 #-- PROMPT --#
 if [[ ${TERM} = "linux" ]]; then
     PROMPT='%B%F{red}%(?..%? )%f%b%B%F{red}%n%f%b@%m %B%40<..<%~%<< %b%# '
@@ -187,7 +173,6 @@ else
 
     install_powerline_precmd
 fi
-
 #-- Like fish prompt --#
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
