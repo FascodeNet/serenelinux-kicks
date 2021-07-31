@@ -8,14 +8,15 @@
 # - Christoph Wickert <cwickert@fedoraproject.org>
 # - Kevin Fenzi       <kevin@tummy.com>
 # - Adam Miller       <maxamillion@fedoraproject.org>
+
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
-# %include fedora-xfce-common.ks
+%include fedora-xfce-common.ks
+
 # need a bigger /
 part / --size 6144
 
 %post
-
 # xfce configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
@@ -62,7 +63,6 @@ sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.d
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
-cp /etc/skel/.zshrc /home/liveuser/.zshrc
 # no updater applet in live environment
 rm -f /etc/xdg/autostart/org.mageia.dnfdragora-updater.desktop
 
@@ -74,4 +74,6 @@ chown -R liveuser:liveuser /home/liveuser
 restorecon -R /home/liveuser
 
 EOF
+
 %end
+

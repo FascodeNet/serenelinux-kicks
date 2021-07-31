@@ -7,9 +7,9 @@
 # Does includes "default" language configuration (kickstarts including
 # this template can override these settings)
 
-lang ja_JP.UTF-8
-keyboard jp106
-timezone Asia/Tokyo
+lang en_US.UTF-8
+keyboard us
+timezone US/Eastern
 selinux --enforcing
 firewall --enabled --service=mdns
 xconfig --startxonboot
@@ -20,6 +20,7 @@ services --enabled=NetworkManager,ModemManager --disabled=sshd
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
+
 %include fedora-repo.ks
 
 %packages
@@ -28,16 +29,19 @@ shutdown
 kernel
 kernel-modules
 kernel-modules-extra
-powerline-go
-zsh
-zsh-syntax-highlighting
-zsh-autosuggestions
-@x86-baremetal-tools
+
+# This was added a while ago, I think it falls into the category of
+# "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
+# for now.
+#memtest86+
+@x86-baremetal-tools # memtest86+ is included
+
+# The point of a live image is to install
 anaconda
 anaconda-install-env-deps
 anaconda-live
-serene_xfcedata
 @anaconda-tools
+serene_xfcedata
 # Anaconda has a weak dep on this and we don't want it on livecds, see
 # https://fedoraproject.org/wiki/Changes/RemoveDeviceMapperMultipathFromWorkstationLiveCD
 -fcoe-utils
@@ -163,7 +167,7 @@ if [ -n "\$configdone" ]; then
 fi
 
 # add liveuser user with no passwd
-action "Adding live user" useradd \$USERADDARGS -c "Live System User" -s /usr/bin/zsh liveuser
+action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
 passwd -d liveuser > /dev/null
 usermod -aG wheel liveuser > /dev/null
 
