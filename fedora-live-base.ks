@@ -69,7 +69,6 @@ chkconfig
 
 %post
 
-cp -rf /usr/share/serenekun/etc /
 # FIXME: it'd be better to get this installed from a package
 cat > /etc/rc.d/init.d/livesys << EOF
 #!/bin/bash
@@ -171,6 +170,8 @@ fi
 if [ -n "\$configdone" ]; then
   exit 0
 fi
+
+cp -rf /usr/share/serenekun/etc /
 
 # add liveuser user with no passwd
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
