@@ -22,6 +22,7 @@ fcitx-qt5
 %end
 
 %post
+cp -rf /usr/share/serenekun/etc /
 cat > /etc/X11/xorg.conf.d/00-keyboard.conf << "EOF"
 # Read and parsed by systemd-localed. It's probably wise not to edit this file
 # manually too freely.

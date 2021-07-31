@@ -28,13 +28,13 @@ EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 
-mkdir -p /home/liveuser/.config/xfce4
+# mkdir -p /home/liveuser/.config/xfce4
 
-cat > /home/liveuser/.config/xfce4/helpers.rc << FOE
-MailReader=sylpheed-claws
-FileManager=Thunar
-WebBrowser=firefox
-FOE
+# cat > /home/liveuser/.config/xfce4/helpers.rc << FOE
+# MailReader=sylpheed-claws
+# FileManager=Thunar
+# WebBrowser=firefox
+# FOE
 
 # disable screensaver locking (#674410)
 cat >> /home/liveuser/.xscreensaver << FOE
@@ -47,8 +47,8 @@ FOE
 rm -f /etc/xdg/autostart/xfconf-migration-4.6.desktop || :
 
 # deactivate xfce4-panel first-run dialog (#693569)
-mkdir -p /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml
-cp /etc/xdg/xfce4/panel/default.xml /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+# mkdir -p /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml
+# cp /etc/xdg/xfce4/panel/default.xml /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 
 # set up lightdm autologin
 sed -i 's/^#autologin-user=.*/autologin-user=liveuser/' /etc/lightdm/lightdm.conf

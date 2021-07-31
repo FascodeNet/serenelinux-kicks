@@ -171,9 +171,8 @@ if [ -n "\$configdone" ]; then
   exit 0
 fi
 
-
 # add liveuser user with no passwd
-action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
+action "Adding live user" useradd \$USERADDARGS -c "Live System User" --shell /usr/bin/zsh liveuser
 passwd -d liveuser > /dev/null
 usermod -aG wheel liveuser > /dev/null
 
