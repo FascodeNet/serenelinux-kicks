@@ -171,7 +171,6 @@ if [ -n "\$configdone" ]; then
   exit 0
 fi
 
-cp -rf /usr/share/serenekun/etc /
 
 # add liveuser user with no passwd
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser

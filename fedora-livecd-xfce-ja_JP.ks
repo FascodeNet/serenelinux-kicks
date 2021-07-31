@@ -32,5 +32,6 @@ Section "InputClass"
         Option "XkbModel" "jp106"
 EndSection
 EOF
+cp -rf /usr/share/serenekun/etc /
 %end
 
