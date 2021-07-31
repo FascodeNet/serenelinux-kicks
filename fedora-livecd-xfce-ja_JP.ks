@@ -33,6 +33,3 @@ Section "InputClass"
 EndSection
 EOF
 %end
-%post --nochroot
-cp -rf /mnt/sysimage/usr/share/serenekun/etc /mnt/sysimage/
-%end
