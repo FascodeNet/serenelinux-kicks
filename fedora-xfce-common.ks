@@ -13,10 +13,6 @@
 fedora-release-xfce
 # install env-group to resolve RhBug:1891500
 @^xfce-desktop-environment
-powerline-go
-zsh
-zsh-syntax-highlighting
-zsh-autosuggestions
 @xfce-apps
 @xfce-extra-plugins
 @xfce-media

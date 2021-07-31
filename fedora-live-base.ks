@@ -30,6 +30,11 @@ kernel
 kernel-modules
 kernel-modules-extra
 
+powerline-go
+zsh
+zsh-syntax-highlighting
+zsh-autosuggestions
+
 # This was added a while ago, I think it falls into the category of
 # "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
 # for now.
@@ -63,6 +68,7 @@ chkconfig
 %end
 
 %post
+
 cp -rf /usr/share/serenekun/etc /
 # FIXME: it'd be better to get this installed from a package
 cat > /etc/rc.d/init.d/livesys << EOF
