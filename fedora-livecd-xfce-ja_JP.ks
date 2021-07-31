@@ -32,6 +32,7 @@ Section "InputClass"
         Option "XkbModel" "jp106"
 EndSection
 EOF
-cp -rf /usr/share/serenekun/etc /
 %end
-
+%post --nochroot
+cp -rf /mnt/sysimage/usr/share/serenekun/etc /mnt/sysimage/
+%end
