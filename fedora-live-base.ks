@@ -173,6 +173,7 @@ fi
 
 
 # add liveuser user with no passwd
+action "Copy ROOTFS Serene" cp -rf /usr/share/serenekun/etc / 
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
 passwd -d liveuser > /dev/null
 usermod -aG wheel liveuser > /dev/null
