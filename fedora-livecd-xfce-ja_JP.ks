@@ -6,7 +6,7 @@
 # Maintainer(s):
 # - Shintaro Fujiwara <shintaro.fujiwara@miraclelinux.com>
 
-%include ../fedora-live-xfce.ks
+%include fedora-live-xfce.ks
 
 lang ja_JP.UTF-8
 keyboard jp
