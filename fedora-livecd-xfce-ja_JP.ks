@@ -14,13 +14,11 @@ timezone Asia/Tokyo
 
 %packages
 langpacks-ja
-# exclude input methods except ibus:
--m17n*
--scim*
--iok
+fcitx
+fcitx-configtool
+fcitx-anthy
+fcitx-qt5
 
-# ibus-kkc 
-ibus-kkc
 %end
 
 %post
@@ -34,5 +32,11 @@ Section "InputClass"
         Option "XkbModel" "jp106"
 EndSection
 EOF
+cat >> /etc/environment << "EOF"
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+EOF
+
 %end
 
