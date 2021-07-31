@@ -7,3 +7,4 @@
 
 # For non-master branches the following should be uncommented
 %include fedora-repo-not-rawhide.ks
+%include myrepo.ks

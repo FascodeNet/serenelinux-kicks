@@ -20,7 +20,6 @@ services --enabled=NetworkManager,ModemManager --disabled=sshd
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
-
 %include fedora-repo.ks
 
 %packages
@@ -29,24 +28,15 @@ shutdown
 kernel
 kernel-modules
 kernel-modules-extra
-
-# zsh
-
 powerline-go
 zsh
 zsh-syntax-highlighting
 zsh-autosuggestions
-
-# This was added a while ago, I think it falls into the category of
-# "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
-# for now.
-#memtest86+
-@x86-baremetal-tools # memtest86+ is included
-
-# The point of a live image is to install
+@x86-baremetal-tools
 anaconda
 anaconda-install-env-deps
 anaconda-live
+serene_xfcedata
 @anaconda-tools
 # Anaconda has a weak dep on this and we don't want it on livecds, see
 # https://fedoraproject.org/wiki/Changes/RemoveDeviceMapperMultipathFromWorkstationLiveCD
@@ -69,7 +59,7 @@ chkconfig
 %end
 
 %post
-
+cp -rf /usr/share/serenekun/etc /
 # FIXME: it'd be better to get this installed from a package
 cat > /etc/rc.d/init.d/livesys << EOF
 #!/bin/bash

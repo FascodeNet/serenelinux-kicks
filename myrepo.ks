@@ -1,0 +1,1 @@
+repo --name=kokkiemouse --baseurl=https://kokkiemouse.github.io/s_repo/f$releasever/
