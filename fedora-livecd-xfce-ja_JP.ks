@@ -8,7 +8,7 @@
 
 %include fedora-live-xfce.ks
 
-lang ja_JP.UTF-8
+# lang ja_JP.UTF-8
 keyboard jp
 timezone Asia/Tokyo
 
@@ -32,11 +32,5 @@ Section "InputClass"
         Option "XkbModel" "jp106"
 EndSection
 EOF
-cat >> /etc/environment << "EOF"
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-GTK_IM_MODULE=fcitx
-EOF
-
 %end
 
