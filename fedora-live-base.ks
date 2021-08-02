@@ -51,6 +51,11 @@ anaconda-install-env-deps
 anaconda-live
 @anaconda-tools
 serene_xfcedata
+paper-icon-theme
+qt5ct
+qt5-qtstyleplugins
+firefox
+serene-google-menus
 # Anaconda has a weak dep on this and we don't want it on livecds, see
 # https://fedoraproject.org/wiki/Changes/RemoveDeviceMapperMultipathFromWorkstationLiveCD
 -fcoe-utils
