@@ -34,7 +34,8 @@ powerline-go
 zsh
 zsh-syntax-highlighting
 zsh-autosuggestions
-
+serenelinux-keyring
+yamad-repo
 # This was added a while ago, I think it falls into the category of
 # "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
 # for now.
