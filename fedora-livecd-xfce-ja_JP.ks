@@ -23,6 +23,7 @@ fcitx-qt5
 
 %post
 cp -rf /usr/share/serenekun/etc /
+sed -i "s/en_US/ja_JP/g" /etc/locale.conf
 cat > /etc/X11/xorg.conf.d/00-keyboard.conf << "EOF"
 # Read and parsed by systemd-localed. It's probably wise not to edit this file
 # manually too freely.
