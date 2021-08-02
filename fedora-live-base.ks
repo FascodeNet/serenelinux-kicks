@@ -36,6 +36,9 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 serenelinux-keyring
 yamad-repo
+numix-blue-gtk-theme-bin
+serenelinux-icon
+serenelinux-wallpaper
 # This was added a while ago, I think it falls into the category of
 # "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
 # for now.
