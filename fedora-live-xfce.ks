@@ -17,6 +17,39 @@
 part / --size 6144
 
 %post
+cat > /etc/anaconda/product.d/serene.conf <<EOF
+
+[Product]
+product_name = Serene Linux
+
+[Network]
+default_on_boot = FIRST_WIRED_WITH_LINK
+
+[Bootloader]
+efi_dir = serene_f
+
+[Storage]
+default_scheme = BTRFS
+btrfs_compression = zstd:1
+
+[User Interface]
+default_help_pages =
+    SerenePlaceholder.txt
+    SerenePlaceholder.html
+    SerenePlaceholderWithLinks.html
+
+[Payload]
+default_source = CLOSEST_MIRROR
+
+default_rpm_gpg_keys =
+    /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+
+updates_repositories =
+    updates
+    updates-modular
+
+
+EOF
 # xfce configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
