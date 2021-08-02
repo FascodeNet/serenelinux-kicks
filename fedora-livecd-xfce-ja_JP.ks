@@ -22,6 +22,13 @@ fcitx-qt5
 %end
 
 %post
+mkdir -p /etc/dconf/db/local.d/
+cat > /etc/dconf/db/local.d/jp_serene << "EOF"
+[desktop/ibus/general]
+engines-order=['anthy', 'xkb:jp::jpn']
+preload-engines=['anthy']
+EOF
+dconf update
 cp -rf /usr/share/serenekun/etc /
 sed -i "s/en_US/ja_JP/g" /etc/locale.conf
 cat > /etc/X11/xorg.conf.d/00-keyboard.conf << "EOF"
