@@ -53,7 +53,7 @@ EOF
 # xfce configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
-
+sed -i "s|/bin/bash|/usr/bin/zsh|g" /etc/default/useradd
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
 DISPLAYMANAGER=/usr/sbin/lightdm
