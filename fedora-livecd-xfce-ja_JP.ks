@@ -28,6 +28,29 @@ cat > /etc/dconf/db/local.d/jp_serene << "EOF"
 engines-order=['anthy', 'xkb:jp::jpn']
 preload-engines=['anthy']
 EOF
+cat > /etc/dconf/db/local.d/serenelinux << "EOF"
+[net/launchpad/plank/docks/dock1]
+alignment='center'
+auto-pinning=true
+current-workspace-only=false
+dock-items=['gimp.dockitem', 'firefox.dockitem', 'vlc.dockitem', 'xfce4-screenshooter.dockitem', 'thunar.dockitem', 'xfce4-terminal.dockitem']
+hide-delay=50
+hide-mode='intelligent'
+icon-size=45
+items-alignment='center'
+lock-items=false
+monitor=''
+offset=0
+pinned-only=false
+position='bottom'
+pressure-reveal=false
+show-dock-item=false
+theme='Arc'
+tooltips-enabled=true
+unhide-delay=0
+zoom-enabled=false
+zoom-percent=150
+EOF
 dconf update
 cp -rf /usr/share/serenekun/etc /
 sed -i "s/en_US/ja_JP/g" /etc/locale.conf

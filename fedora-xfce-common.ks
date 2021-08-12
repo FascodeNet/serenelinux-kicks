@@ -17,8 +17,10 @@ fedora-release-xfce
 @xfce-extra-plugins
 @xfce-media
 @xfce-office
-
+vlc
+gimp
 wget
+cairo-dock
 system-config-printer
 
 # save some space
