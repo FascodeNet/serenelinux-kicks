@@ -22,6 +22,13 @@ fcitx-qt5
 %end
 
 %post
+cat > /etc/lightdm/lightdm-qtquick-greeter.json << "EOF"
+{ 
+    "background_path":"file://usr/share/backgrounds/serene/serene-wallpaper-1.png",
+    "theme":"qrc:/Login.qml"
+}
+EOF
+sed -i "s/#greeter-session=example-gtk-gnome/greeter-session=lightdm-qtquick-greeter/g" /etc/lightdm/lightdm.conf
 mkdir -p /etc/dconf/db/local.d/
 cat > /etc/dconf/db/local.d/jp_serene << "EOF"
 [desktop/ibus/general]

@@ -9,7 +9,7 @@
 # - Mukundan Ragavan  <nonamedotc@fedoraproject.org>
 
 %packages
-
+lightdm-qtquick-greeter
 fedora-release-xfce
 # install env-group to resolve RhBug:1891500
 @^xfce-desktop-environment
