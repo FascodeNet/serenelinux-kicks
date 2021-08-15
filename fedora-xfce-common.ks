@@ -16,7 +16,6 @@ fedora-release-xfce
 @xfce-apps
 @xfce-extra-plugins
 @xfce-media
-@xfce-office
 gimp
 wget
 cairo-dock
