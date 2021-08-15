@@ -26,11 +26,10 @@ product_name = Serene Linux
 default_on_boot = FIRST_WIRED_WITH_LINK
 
 [Bootloader]
-efi_dir = serene_f
+efi_dir = fedora
 
 [Storage]
-default_scheme = BTRFS
-btrfs_compression = zstd:1
+default_scheme = PLAIN
 
 [User Interface]
 default_help_pages =
