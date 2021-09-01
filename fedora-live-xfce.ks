@@ -14,7 +14,7 @@
 %include fedora-xfce-common.ks
 
 # need a bigger /
-part / --size 12750
+part / --size 8192
 
 %post
 cat > /etc/anaconda/product.d/serene.conf <<EOF
