@@ -60,6 +60,7 @@ zoom-percent=150
 EOF
 dconf update
 cp -rf /usr/share/serenekun/etc /
+ln -s /usr/share/backgrounds/default.jpg /usr/share/backgrounds/images/default.png
 sed -i "s/en_US/ja_JP/g" /etc/locale.conf
 cat > /etc/X11/xorg.conf.d/00-keyboard.conf << "EOF"
 # Read and parsed by systemd-localed. It's probably wise not to edit this file
