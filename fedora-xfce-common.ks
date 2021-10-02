@@ -20,6 +20,7 @@ gimp
 wget
 cairo-dock
 system-config-printer
+serene-desktop-background-compat
 
 # save some space
 -autofs
