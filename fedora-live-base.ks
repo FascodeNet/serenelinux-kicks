@@ -77,7 +77,6 @@ chkconfig
 %end
 
 %post
-
 # FIXME: it'd be better to get this installed from a package
 cat > /etc/rc.d/init.d/livesys << EOF
 #!/bin/bash

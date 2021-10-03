@@ -17,6 +17,10 @@
 part / --size 12750
 
 %post
+
+systemctl disable lightdm
+systemctl enable sddm
+
 cat > /etc/anaconda/product.d/serene.conf <<EOF
 
 [Product]
@@ -55,7 +59,7 @@ EOF
 sed -i "s|/bin/bash|/usr/bin/zsh|g" /etc/default/useradd
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
-DISPLAYMANAGER=/usr/sbin/lightdm
+DISPLAYMANAGER=/usr/bin/sddm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
@@ -89,6 +93,11 @@ sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/li
 
 # set Xfce as default session, otherwise login will fail
 sed -i 's/^#user-session=.*/user-session=xfce/' /etc/lightdm/lightdm.conf
+
+# set up sddm autologin
+sed -i 's/^#Session=/Session=xfce.desktop/' /etc/sddm.conf
+sed -i 's/^#User=/User=liveuser/' /etc/sddm.conf
+sed -i 's/^#Current=01-breeze-fedora/Current=sddm-chili/' /etc/sddm.conf
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop

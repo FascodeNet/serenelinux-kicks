@@ -21,6 +21,8 @@ wget
 cairo-dock
 system-config-printer
 serene-desktop-backgrounds-compat
+serene-sddm-chili
+sddm
 
 # save some space
 -autofs
