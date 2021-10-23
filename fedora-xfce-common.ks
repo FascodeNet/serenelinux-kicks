@@ -21,6 +21,7 @@ wget
 cairo-dock
 system-config-printer
 serene-desktop-backgrounds-compat
+nerd-fonts-noto-mini
 
 # save some space
 -autofs

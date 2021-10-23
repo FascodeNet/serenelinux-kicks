@@ -56,6 +56,7 @@ qt5ct
 qt5-qtstyleplugins
 firefox
 serene-google-menus
+lsd
 # Anaconda has a weak dep on this and we don't want it on livecds, see
 # https://fedoraproject.org/wiki/Changes/RemoveDeviceMapperMultipathFromWorkstationLiveCD
 -fcoe-utils
