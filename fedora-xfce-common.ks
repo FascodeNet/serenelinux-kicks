@@ -22,7 +22,7 @@ cairo-dock
 system-config-printer
 serene-desktop-backgrounds-compat
 nerd-fonts-noto-mini
-
+lsd-control
 # save some space
 -autofs
 -acpid
