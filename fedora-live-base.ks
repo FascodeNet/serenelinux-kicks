@@ -185,6 +185,8 @@ fi
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" --shell /usr/bin/zsh liveuser
 rm -rf /home/liveuser/.config
 cp -rf /etc/skel/.config /home/liveuser/
+rm -rf /home/liveuser/.zshfc
+cp -rf /etc/skel/.zshrc /home/liveuser/
 passwd -d liveuser > /dev/null
 usermod -aG wheel liveuser > /dev/null
 
