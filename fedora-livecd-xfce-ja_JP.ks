@@ -14,10 +14,13 @@ timezone Asia/Tokyo
 
 %packages
 langpacks-ja
-fcitx
-fcitx-configtool
-fcitx-anthy
-fcitx-qt5
+fcitx5-qt
+fcitx5-m17n
+fcitx5-gtk
+fcitx5-configtool
+fcitx5-autostart
+fcitx5-mozc
+fcitx5-qt-module
 
 %end
 
