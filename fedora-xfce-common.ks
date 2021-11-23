@@ -23,6 +23,8 @@ system-config-printer
 serene-desktop-backgrounds-compat
 nerd-fonts-noto-mini
 lsd-control
+pulseaudio-utils
+vlc
 # save some space
 -autofs
 -acpid

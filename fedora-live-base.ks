@@ -36,6 +36,7 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 serenelinux-keyring
 yamad-repo
+rpmfusion-free-release
 numix-blue-gtk-theme-bin
 serenelinux-icon
 serenelinux-wallpaper
